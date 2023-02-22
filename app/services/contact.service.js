@@ -13,7 +13,7 @@ class ContactService {
             favorite: payload.favorite,
         };
         // Remove undefined fields
-        ObjectId.keys(contact).forEach(
+        Object.keys(contact).forEach(
             (key) => contact[key] === undefined && delete contact[key]
         );
         return contact;
@@ -46,7 +46,7 @@ class ContactService {
     //update
     async update(id, payload) {
         const filter = {
-            _id: ObjectId.isValid(id) ? new ObjectId(id) : null,
+            _id: Object.isValid(id) ? new Object(id) : null,
         };
         const update = this.extractConactData(payload);
         const result = await this.Contact.findOneAndUpdate(
