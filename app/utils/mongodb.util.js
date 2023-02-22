@@ -1,4 +1,4 @@
-const { MongoClient } = required("mongodb");
+const { MongoClient } = require("mongodb");
 class MongoDB {
     static connect = async (uri) => {
         if (this.client)

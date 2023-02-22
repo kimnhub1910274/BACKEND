@@ -1,7 +1,6 @@
 {
   "name": "contactbook-backend",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -15,5 +14,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimnhub1910274/ct449.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kimnhub1910274/ct449/issues"
+  },
+  "homepage": "https://github.com/kimnhub1910274/ct449#readme",
+  "description": ""
 }
