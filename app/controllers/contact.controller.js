@@ -39,7 +39,7 @@ exports.findOne = async (req, res, next) => {
     try{
         const contactService = new ContactService(MongoDB.client);
         const document = await contactService.findById(req.params.id);
-        if(!document) {
+        if(!document ) {
             return next(new ApiError(404, "Contact not found"));
         }
         return res.send(document);
@@ -57,7 +57,7 @@ exports.update = async (req, res, next) => {
     }
     try{
         const contactService = new ContactService(MongoDB.client);
-        const document = await contactService.update(req.params.id,req.body);
+        const document = await contactService.update(req.params.id, req.body);
        if(!document){
         return next(new ApiError(400, "Contact not found"));
        }

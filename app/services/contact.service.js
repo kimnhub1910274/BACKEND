@@ -22,8 +22,8 @@ class ContactService {
         const contact = this.extractConactData(payload);
         const result = await this.Contact.findOneAndUpdate(
             contact,
-    { $set: { favorite: contact.favorite === true } },
-    { returnDocument: "after", upsert: true }
+            { $set: { favorite: contact.favorite === true } },
+            { returnDocument: "after", upsert: true }
     );
     return result.value;
     }
@@ -34,7 +34,7 @@ class ContactService {
     } 
     async findByName(name) {
         return await this.find({
-        name: { $regex: new RegExp(name), $options: "i" },
+            name: { $regex: new RegExp(name), $options: "i" },
         });
     }
     //findOne
